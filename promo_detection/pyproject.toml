@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "promo_detection"
+version = "0.1.0"
+description = "promo_detection using crewAI"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+crewai = { extras = ["tools"], version = "^0.41.1" }
+
+[tool.poetry.scripts]
+promo_detection = "promo_detection.main:run"
+train = "promo_detection.main:train"
+replay = "promo_detection.main:replay"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
